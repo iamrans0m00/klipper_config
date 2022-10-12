@@ -7,7 +7,7 @@ max_upload_size = 1024
 [file_manager]
 config_path = ~/klipper_config
 log_path = ~/klipper_logs
-enable_object_processing = False
+enable_object_processing = True
 
 [authorization]
 cors_domains = 
@@ -33,8 +33,9 @@ subscriptions =
 	mainsail
 
 [update_manager]
-refresh_interval = 168
+refresh_interval = 92
 enable_auto_refresh = True
+channel = dev
 
 [update_manager mainsail]
 type = web
@@ -63,16 +64,6 @@ path = ~/sonar
 origin = https://github.com/mainsail-crew/sonar.git
 primary_branch = main
 managed_services = sonar
-
-[update_manager moonraker-obico]
-type = git_repo
-path = ~/moonraker-obico
-origin = https://github.com/TheSpaghettiDetective/moonraker-obico.git
-env = /home/pi/moonraker-env/bin/python
-requirements = requirements.txt
-install_script = install.sh
-managed_services = 
-	moonraker-obico
 
 [update_manager client z_calibration]
 type = git_repo

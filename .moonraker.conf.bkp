@@ -27,7 +27,7 @@ trusted_clients =
 
 [announcements]
 subscriptions = 
-	mainsail
+	octoeverywhere
 
 [update_manager]
 refresh_interval = 92
@@ -91,4 +91,15 @@ requirements = requirements.txt
 install_script = install.sh
 managed_services = 
 	moonraker-obico
+
+[update_manager octoeverywhere]
+type = git_repo
+channel = beta
+path = /home/pi/octoeverywhere
+origin = https://github.com/QuinnDamerell/OctoPrint-OctoEverywhere.git
+env = /home/pi/octoeverywhere-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services = 
+	octoeverywhere
 
